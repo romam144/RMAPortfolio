@@ -1,0 +1,1 @@
+Put images for client-photos here. Website path starts with /images/client-photos/ 
