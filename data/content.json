@@ -1,0 +1,359 @@
+{
+  "site": {
+    "name": "Ramichai",
+    "instagram": "@itsamrom",
+    "instagramUrl": "https://www.instagram.com/itsamrom/",
+    "metaDescription": "Ramichai photography and videography portfolio. Client videos, brand films, social reels, full client photo shoots, personal work and short films by @itsamrom."
+  },
+  "hero": {
+    "eyebrow": "Ramichai / @itsamrom",
+    "title": "Photography and video with a clean, cinematic feel.",
+    "text": "I am a photographer and videographer building a portfolio around real people, places, moments and visual stories. The work should come first, the words should stay simple, and the next step should be easy.",
+    "scribble": "photo + video journal",
+    "imageUrl": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=84",
+    "imageAlt": "Filmmaker holding a camera during a production shoot",
+    "captionTitle": "A personal portfolio built around real moments.",
+    "captionText": "Videography / photography / moments"
+  },
+  "featuredVideo": {
+    "label": "Featured video",
+    "title": "One chosen video to lead the portfolio.",
+    "description": "This can be client work, a short film, a personal video, or any piece you want people to see first. It should be the video you feel best represents the moment.",
+    "imageUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1500&q=86",
+    "videoUrl": "https://www.youtube.com/",
+    "kicker": "FEATURED VIDEO / SELECTED PIECE",
+    "headline": "A video chosen because it belongs at the front.",
+    "notes": [
+      {
+        "title": "Any source",
+        "text": "Use this for a client video, a personal edit, a short film, or whatever piece you want to lead with.",
+        "color": "teal"
+      },
+      {
+        "title": "Not just Instagram",
+        "text": "This is a main portfolio video space, not an Instagram reel slot.",
+        "color": "tomato"
+      },
+      {
+        "title": "Chosen freely",
+        "text": "The lead video can change whenever a stronger piece deserves the front page.",
+        "color": "olive"
+      }
+    ]
+  },
+  "home": {
+    "selectedWorkTitle": "Selected client work, not the whole archive.",
+    "selectedWorkText": "The home page stays curated: a few strong videos and photo shoots lead people into the full client work archive.",
+    "personalTitle": "Personal work with its own space.",
+    "personalText": "A small preview lives here, while the full personal page can grow with photos, edits and experiments.",
+    "filmsTitle": "Short films have a cinematic shelf.",
+    "filmsText": "Narrative work gets a separate page with posters, loglines and YouTube links."
+  },
+  "clientVideos": [
+    {
+      "id": "brand-film-01",
+      "title": "Brand Film",
+      "format": "Brand film",
+      "category": "brand",
+      "platform": "YouTube",
+      "client": "Client name",
+      "date": "2026",
+      "location": "Israel",
+      "description": "A cinematic client video made to introduce the place, the mood, the people and the feeling behind the brand.",
+      "longDescription": "This project page is built for the full story behind a client video: what the piece was made for, where it was published, what versions were delivered and how the edit should feel.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=86",
+      "thumbnailAlt": "Cinema camera on a production set",
+      "embedUrl": "",
+      "watchUrl": "https://www.youtube.com/",
+      "deliverables": [
+        "Main film",
+        "Cutdowns",
+        "Social export"
+      ],
+      "featuredOnHome": true,
+      "visible": true
+    },
+    {
+      "id": "social-reel-01",
+      "title": "Social Reel Package",
+      "format": "Social video",
+      "category": "social",
+      "platform": "Instagram",
+      "client": "Client name",
+      "date": "2026",
+      "location": "Instagram / social",
+      "description": "Short vertical edits for Instagram or TikTok: quick pacing, clean framing and a strong first seconds.",
+      "longDescription": "This page can hold the reel, the client context and the exact social deliverables, while the home page only shows the strongest preview.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=86",
+      "thumbnailAlt": "Camera body and lens on a dark studio surface",
+      "embedUrl": "",
+      "watchUrl": "https://www.instagram.com/itsamrom/",
+      "deliverables": [
+        "Vertical reel",
+        "Story version",
+        "Thumbnail"
+      ],
+      "featuredOnHome": true,
+      "visible": true
+    },
+    {
+      "id": "event-recap-01",
+      "title": "Event Recap",
+      "format": "Event video",
+      "category": "event",
+      "platform": "YouTube / Instagram",
+      "client": "Client name",
+      "date": "2026",
+      "location": "Event coverage",
+      "description": "A recap built from energy, people, sound, movement and small moments that make the event feel alive again.",
+      "longDescription": "Event recaps need room for the atmosphere, the client goal and the final package. This detail page can show the video and explain the delivery without overcrowding the homepage.",
+      "thumbnailUrl": "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1200&q=86",
+      "thumbnailAlt": "Live performance stage with dramatic lighting",
+      "embedUrl": "",
+      "watchUrl": "https://www.youtube.com/",
+      "deliverables": [
+        "Highlight edit",
+        "Vertical clips",
+        "Select stills"
+      ],
+      "featuredOnHome": false,
+      "visible": true
+    }
+  ],
+  "clientPhotoShoots": [
+    {
+      "id": "portrait-client-shoot",
+      "title": "Portrait Client Shoot",
+      "client": "Client name",
+      "category": "portrait",
+      "shootType": "Portrait photos",
+      "date": "2026",
+      "location": "Portrait session",
+      "description": "A focused photo set with clean portraits, details and a consistent visual feeling for the client.",
+      "longDescription": "Each client photo shoot gets its own page so the full set can be viewed together: cover frame, client details, edited photos and the purpose of the shoot.",
+      "coverUrl": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1100&q=86",
+      "coverAlt": "Fashion portrait photographed in natural light",
+      "details": [
+        "Portraits",
+        "Edited photo set",
+        "Web and social exports"
+      ],
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=900&q=84",
+          "alt": "Portrait from client shoot",
+          "caption": "Main portrait"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1512316609839-ce289d3eba0a?auto=format&fit=crop&w=900&q=84",
+          "alt": "Close portrait in soft light",
+          "caption": "Close frame"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=84",
+          "alt": "Editorial portrait frame",
+          "caption": "Editorial angle"
+        }
+      ],
+      "featuredOnHome": true,
+      "visible": true
+    },
+    {
+      "id": "place-client-shoot",
+      "title": "Place Visuals",
+      "client": "Client name",
+      "category": "place",
+      "shootType": "Location photos",
+      "date": "2026",
+      "location": "Client location",
+      "description": "Interior, location and atmosphere images for a client who needs a place to feel clear and inviting.",
+      "longDescription": "A location gallery works best as a complete set. This page can hold the wide frames, details and atmosphere images without forcing everything onto the front page.",
+      "coverUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1100&q=86",
+      "coverAlt": "Modern hospitality space with warm interior light",
+      "details": [
+        "Atmosphere",
+        "Details",
+        "Client gallery"
+      ],
+      "photos": [
+        {
+          "url": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=84",
+          "alt": "Warm interior client location",
+          "caption": "Wide space"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=84",
+          "alt": "Coffee detail on a table",
+          "caption": "Detail"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=900&q=84",
+          "alt": "Cafe interior with tables",
+          "caption": "Atmosphere"
+        }
+      ],
+      "featuredOnHome": true,
+      "visible": true
+    }
+  ],
+  "personalWork": [
+    {
+      "id": "portrait-experiments",
+      "title": "Portrait Experiments",
+      "type": "PERSONAL PHOTO",
+      "category": "photo personal",
+      "description": "Faces, light and small styling choices that feel more like exploration than assignment.",
+      "detailA": "Photo",
+      "detailB": "Personal",
+      "mediaUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=84",
+      "mediaAlt": "Confident portrait in soft studio light",
+      "shape": "tall",
+      "featuredOnHome": true,
+      "visible": true
+    },
+    {
+      "id": "walkaround-edits",
+      "title": "Walkaround Edits",
+      "type": "PERSONAL VIDEO",
+      "category": "video personal",
+      "description": "Small video studies from places, light, motion and the feeling of being there.",
+      "detailA": "Video",
+      "detailB": "Places",
+      "mediaUrl": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=900&q=84",
+      "mediaAlt": "Travel landscape at golden hour",
+      "shape": "wide",
+      "featuredOnHome": true,
+      "visible": true
+    },
+    {
+      "id": "everyday-details",
+      "title": "Everyday Details",
+      "type": "DETAILS",
+      "category": "photo personal",
+      "description": "Texture, objects, corners and quiet scenes that build a personal visual language.",
+      "detailA": "Photo",
+      "detailB": "Observation",
+      "mediaUrl": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=84",
+      "mediaAlt": "Cup of coffee on a cafe table",
+      "shape": "wide",
+      "featuredOnHome": false,
+      "visible": true
+    },
+    {
+      "id": "motion-tests",
+      "title": "Motion Tests",
+      "type": "EDIT STUDY",
+      "category": "video personal",
+      "description": "Quick edits for pacing, transitions, color and the kind of rhythm you want to develop.",
+      "detailA": "Video",
+      "detailB": "Experiment",
+      "mediaUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=900&q=84",
+      "mediaAlt": "Cinema camera on a production set",
+      "shape": "wide",
+      "featuredOnHome": false,
+      "visible": true
+    }
+  ],
+  "shortFilms": [
+    {
+      "id": "short-film-01",
+      "status": "Coming soon / YouTube",
+      "title": "Short Film 01",
+      "description": "A reserved hero slot for the first full short film: poster frame, logline, embedded YouTube video and a direct watch link.",
+      "posterUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=900&q=84",
+      "posterAlt": "Large cinema camera on a production set",
+      "youtubeUrl": "https://www.youtube.com/",
+      "secondaryUrl": "#contact",
+      "secondaryLabel": "Ask about the film",
+      "featuredOnHome": true,
+      "visible": true
+    },
+    {
+      "id": "scene-experiments",
+      "status": "Scene tests / YouTube",
+      "title": "Scene Experiments",
+      "description": "A place for small narrative tests: one scene, one mood, one character, one visual idea, hosted on YouTube when ready.",
+      "posterUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=900&q=84",
+      "posterAlt": "Camera body and lens on a dark studio surface",
+      "youtubeUrl": "https://www.youtube.com/",
+      "secondaryUrl": "#personal",
+      "secondaryLabel": "See personal work",
+      "featuredOnHome": true,
+      "visible": true
+    }
+  ],
+  "services": [
+    {
+      "title": "Brand Films",
+      "text": "Main client videos that introduce a brand, place, person or feeling with a cinematic edit.",
+      "items": [
+        "Main film",
+        "Story edit",
+        "YouTube export"
+      ]
+    },
+    {
+      "title": "Client Photos",
+      "text": "Complete photo shoots organized into galleries, not just one preview image.",
+      "items": [
+        "Portraits",
+        "Places",
+        "Edited photo sets"
+      ]
+    },
+    {
+      "title": "Event Coverage",
+      "text": "Photo and video coverage that catches people, motion, light and the feeling of the day.",
+      "items": [
+        "Recap videos",
+        "Candid photos",
+        "Social clips"
+      ]
+    },
+    {
+      "title": "Social Videos",
+      "text": "Vertical videos, reels and cutdowns made to work naturally on Instagram and other feeds.",
+      "items": [
+        "Instagram reels",
+        "Vertical cutdowns",
+        "Story versions"
+      ]
+    }
+  ],
+  "about": {
+    "label": "About Ramichai",
+    "title": "A photographer and videographer building a visual portfolio one strong piece at a time.",
+    "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=84",
+    "note": "The style is cinematic, but the communication stays simple.",
+    "paragraphs": [
+      "I am Ramichai, a photographer and videographer sharing work across video, photography, events, portraits, personal visuals and social-ready edits.",
+      "The portfolio is personal, clean and visual first. It shows the eye behind the camera without turning into a long generic studio page.",
+      "The work comes through in reels, photo sets and short notes that explain the feeling behind each project."
+    ],
+    "tools": [
+      "Videography and short edits",
+      "Photography and portraits",
+      "Editing, color and delivery",
+      "Instagram-first visual content"
+    ]
+  },
+  "contact": {
+    "title": "The portfolio points people straight to the real place: Instagram.",
+    "text": "No fake form, no random email. Just Ramichai, the work, and @itsamrom as the main contact path.",
+    "lines": [
+      {
+        "label": "Instagram",
+        "value": "@itsamrom",
+        "url": "https://www.instagram.com/itsamrom/"
+      },
+      {
+        "label": "Portfolio",
+        "value": "Ramichai"
+      },
+      {
+        "label": "Work",
+        "value": "Photo / video / edits"
+      }
+    ]
+  }
+}
