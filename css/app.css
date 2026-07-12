@@ -929,6 +929,14 @@ section{ padding:58px 42px 72px 36px; position:relative; }
   font-family:"Courier Prime", monospace;
   font-size:11px;
 }
+.shoot-photo.is-deferred{
+  display:none;
+}
+.gallery-actions{
+  display:flex;
+  justify-content:center;
+  padding:18px 0 4px;
+}
 
 .work-grid{
   display:grid;

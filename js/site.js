@@ -55,6 +55,30 @@ function pageLink(path) {
   return links[path] || path || "index.html";
 }
 
+function imageUrl(url, width = 1200) {
+  const raw = String(url || "").trim();
+  if (!raw) return "";
+  if (!/imagekit\.io/i.test(raw)) return raw;
+  const transform = `tr=w-${width},q-82,f-auto`;
+  if (/([?&])tr=/.test(raw)) return raw;
+  return `${raw}${raw.includes("?") ? "&" : "?"}${transform}`;
+}
+
+function img(src, alt, options = {}) {
+  const width = options.width || 1200;
+  const attrs = [
+    `src="${escapeHtml(imageUrl(src, width))}"`,
+    `alt="${escapeHtml(alt || "")}"`,
+    `decoding="async"`
+  ];
+  if (options.eager) {
+    attrs.push(`loading="eager"`, `fetchpriority="high"`);
+  } else {
+    attrs.push(`loading="lazy"`);
+  }
+  return `<img ${attrs.join(" ")}>`;
+}
+
 function renderSectionHead(label, title, copy) {
   return `
     <div class="section-head">
@@ -108,7 +132,7 @@ function renderHero(data) {
       <div class="tape two"></div>
       <div class="location-stamp"><b>${escapeHtml(data.site.name)}</b>photo + video portfolio</div>
       <figure class="hero-image">
-        <img src="${escapeHtml(hero.imageUrl)}" alt="${escapeHtml(hero.imageAlt)}">
+        ${img(hero.imageUrl, hero.imageAlt, { width: 1400, eager: true })}
         <figcaption class="hero-caption">
           <strong>${escapeHtml(hero.captionTitle)}</strong>
           <span>${escapeHtml(hero.captionText)}</span>
@@ -131,7 +155,7 @@ function renderFeatured(data) {
     ${renderSectionHead(featured.label, featured.title, featured.description)}
     <div class="reel-shell">
       <a class="video-stage" href="${escapeHtml(featured.videoUrl)}" target="_blank" rel="noopener" aria-label="Open featured video">
-        <img src="${escapeHtml(featured.imageUrl)}" alt="${escapeHtml(featured.headline)}">
+        ${img(featured.imageUrl, featured.headline, { width: 1200 })}
         <span class="play-button" aria-hidden="true">&#9658;</span>
         <span class="video-title">
           <span>${escapeHtml(featured.kicker)}</span>
@@ -165,7 +189,7 @@ function renderVideoScreen(video) {
   }
   return `
     <a class="client-video-poster" href="${escapeHtml(video.watchUrl || "#contact")}" target="_blank" rel="noopener" aria-label="Open ${title}">
-      <img src="${thumbnail}" alt="${escapeHtml(video.thumbnailAlt || video.title)}">
+      ${img(video.thumbnailUrl, video.thumbnailAlt || video.title, { width: 900 })}
       <span class="play-button" aria-hidden="true">&#9658;</span>
     </a>
   `;
@@ -192,7 +216,7 @@ function renderClientVideo(video, mode = "archive") {
 
 function renderPhotoPreview(photos = []) {
   return photos.slice(0, 3).map((photo) => `
-    <img src="${escapeHtml(photo.url)}" alt="${escapeHtml(photo.alt || photo.caption || "Client photo")}">
+    ${img(photo.url, photo.alt || photo.caption || "Client photo", { width: 260 })}
   `).join("");
 }
 
@@ -201,7 +225,7 @@ function renderClientPhotoShoot(shoot, mode = "archive") {
     <article class="shoot-card" data-category="${escapeHtml(shoot.category || "")}">
       <a class="shoot-card-link" href="${projectUrl("photo", shoot.id)}">
         <span class="shoot-cover">
-          <img src="${escapeHtml(shoot.coverUrl)}" alt="${escapeHtml(shoot.coverAlt || shoot.title)}">
+          ${img(shoot.coverUrl, shoot.coverAlt || shoot.title, { width: 900 })}
           <span>${escapeHtml(shoot.shootType || "Photo shoot")}</span>
         </span>
         <span class="shoot-summary-copy">
@@ -294,7 +318,7 @@ function renderProject(item) {
   return `
     <article class="project" data-category="${escapeHtml(item.category || "")}">
       <div class="project-media${shape}">
-        <img src="${escapeHtml(item.mediaUrl)}" alt="${escapeHtml(item.mediaAlt || item.title)}">
+        ${img(item.mediaUrl, item.mediaAlt || item.title, { width: 900 })}
         <span class="project-type">${escapeHtml(item.type)}</span>
       </div>
       <div class="project-body">
@@ -326,7 +350,7 @@ function renderShortFilms(data, mode = "full") {
         ${index === 2 ? '<div class="film-strip" aria-hidden="true"><div></div><div></div><div></div></div>' : ""}
         <article class="film-entry">
           <div class="film-screen">
-            <img src="${escapeHtml(film.posterUrl)}" alt="${escapeHtml(film.posterAlt || film.title)}">
+            ${img(film.posterUrl, film.posterAlt || film.title, { width: 1000 })}
             <a class="youtube-play" href="${escapeHtml(film.youtubeUrl)}" target="_blank" rel="noopener" aria-label="Watch ${escapeHtml(film.title)} on YouTube">&#9658;</a>
           </div>
           <div class="film-info">
@@ -365,7 +389,7 @@ function renderAbout(data) {
   setHtml("#about", `
     <div class="about-wrap">
       <div class="portrait-stack">
-        <div class="portrait"><img src="${escapeHtml(about.imageUrl)}" alt="${escapeHtml(about.title)}"></div>
+        <div class="portrait">${img(about.imageUrl, about.title, { width: 900 })}</div>
         <div class="about-note">${escapeHtml(about.note)}</div>
       </div>
       <div class="about-copy">
@@ -495,7 +519,7 @@ function renderProjectDetail(data) {
         </div>
       </div>
       <figure class="detail-cover">
-        <img src="${escapeHtml(shoot.coverUrl)}" alt="${escapeHtml(shoot.coverAlt || shoot.title)}">
+        ${img(shoot.coverUrl, shoot.coverAlt || shoot.title, { width: 1400 })}
       </figure>
       <div class="detail-grid">
         <article class="detail-card">
@@ -507,20 +531,41 @@ function renderProjectDetail(data) {
           <p>${escapeHtml(shoot.description)}</p>
         </article>
       </div>
-      <div class="shoot-gallery detail-gallery">
-        ${(shoot.photos || []).map(renderShootPhoto).join("")}
-      </div>
+      ${renderShootGallery(shoot.photos || [])}
     </div>
   `);
 }
 
-function renderShootPhoto(photo) {
+function renderShootGallery(photos = []) {
+  const firstBatch = 12;
   return `
-    <figure class="shoot-photo">
-      <img src="${escapeHtml(photo.url)}" alt="${escapeHtml(photo.alt || photo.caption || "Client photo")}">
+    <div class="shoot-gallery detail-gallery" data-gallery-batch="12">
+      ${photos.map((photo, index) => renderShootPhoto(photo, index >= firstBatch)).join("")}
+    </div>
+    ${photos.length > firstBatch ? `<div class="gallery-actions"><button class="btn secondary" type="button" data-load-gallery>Load more photos</button></div>` : ""}
+  `;
+}
+
+function renderShootPhoto(photo, deferred = false) {
+  return `
+    <figure class="shoot-photo${deferred ? " is-deferred" : ""}">
+      ${img(photo.url, photo.alt || photo.caption || "Client photo", { width: 1100 })}
       ${photo.caption ? `<figcaption>${escapeHtml(photo.caption)}</figcaption>` : ""}
     </figure>
   `;
+}
+
+function wireGalleryLoadMore() {
+  document.querySelectorAll("[data-load-gallery]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const gallery = button.closest(".project-detail")?.querySelector(".detail-gallery");
+      if (!gallery) return;
+      const batch = Number(gallery.dataset.galleryBatch || 12);
+      const next = Array.from(gallery.querySelectorAll(".shoot-photo.is-deferred")).slice(0, batch);
+      next.forEach((photo) => photo.classList.remove("is-deferred"));
+      if (!gallery.querySelector(".shoot-photo.is-deferred")) button.remove();
+    });
+  });
 }
 
 function wireFilters() {
@@ -690,6 +735,7 @@ async function init() {
   if (page === "personal") renderPersonalPage(data);
   if (page === "films") renderFilmsPage(data);
   if (page === "home") renderHome(data);
+  wireGalleryLoadMore();
   wireFilters();
   wireMotion();
 }
