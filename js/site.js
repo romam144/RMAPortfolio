@@ -723,8 +723,7 @@ function renderFilmsPage(data) {
 }
 
 async function init() {
-  const response = await fetch("data/content.json");
-  const data = await response.json();
+  const data = await loadContent();
   const page = document.body.dataset.page || "home";
   if (page === "work") renderWorkPage(data);
   if (page === "project") {
@@ -738,6 +737,24 @@ async function init() {
   wireGalleryLoadMore();
   wireFilters();
   wireMotion();
+}
+
+async function loadContent() {
+  const attempts = ["data/content.json", "/api/content"];
+  const errors = [];
+  for (const url of attempts) {
+    try {
+      const response = await fetch(url, { cache: "no-store" });
+      if (!response.ok) {
+        errors.push(`${url}: ${response.status}`);
+        continue;
+      }
+      return await response.json();
+    } catch (error) {
+      errors.push(`${url}: ${error.message}`);
+    }
+  }
+  throw new Error(`Could not load content. Tried ${errors.join(", ")}`);
 }
 
 init().catch((error) => {

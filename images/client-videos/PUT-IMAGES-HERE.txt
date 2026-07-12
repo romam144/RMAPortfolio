@@ -1,1 +1,0 @@
-Put images for client-videos here. Website path starts with /images/client-videos/ 

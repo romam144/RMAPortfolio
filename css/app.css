@@ -1240,6 +1240,29 @@ section{ padding:58px 42px 72px 36px; position:relative; }
   margin-top:18px;
   padding:0;
 }
+.detail-gallery{
+  display:block;
+  columns:3 260px;
+  column-gap:14px;
+}
+.detail-gallery .shoot-photo{
+  display:inline-block;
+  width:100%;
+  margin:0 0 14px;
+  break-inside:avoid;
+  vertical-align:top;
+}
+.detail-gallery .shoot-photo img{
+  width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  object-fit:contain;
+  display:block;
+  background:#eee4d2;
+}
+.detail-gallery .shoot-photo.is-deferred{
+  display:none;
+}
 
 .process-grid{
   display:grid;
