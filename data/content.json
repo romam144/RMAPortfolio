@@ -39,7 +39,8 @@
         "text": "The lead video can change whenever a stronger piece deserves the front page.",
         "color": "olive"
       }
-    ]
+    ],
+    "visible": false
   },
   "home": {
     "selectedWorkTitle": "Selected client work.",
@@ -52,24 +53,39 @@
   "clientVideos": [
     {
       "id": "brand-film-01",
-      "title": "Brand Film",
-      "format": "Brand film",
-      "category": "brand",
-      "platform": "YouTube",
-      "client": "Client name",
+      "title": "Solana Intro",
+      "format": "",
+      "category": "video",
+      "platform": "",
+      "client": "Solana",
       "date": "2026",
-      "location": "Israel",
-      "description": "A cinematic client video made to introduce the place, the mood, the people and the feeling behind the brand.",
-      "longDescription": "This project page is built for the full story behind a client video: what the piece was made for, where it was published, what versions were delivered and how the edit should feel.",
-      "thumbnailUrl": "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=86",
-      "thumbnailAlt": "Cinema camera on a production set",
+      "location": "",
+      "description": "",
+      "longDescription": "",
+      "thumbnailUrl": "https://ik.imagekit.io/ramichaispc/Solana/DSC06869.jpg?updatedAt=1784199010498",
+      "thumbnailAlt": "Restaurant introduction video",
       "embedUrl": "",
-      "watchUrl": "https://www.youtube.com/",
-      "deliverables": [
-        "Main film",
-        "Cutdowns",
-        "Social export"
-      ],
+      "watchUrl": "https://ik.imagekit.io/ramichaispc/Solana/Solana%20(1).mp4",
+      "deliverables": [],
+      "featuredOnHome": true,
+      "visible": true
+    },
+    {
+      "id": "client-video-1784201586195-360e41",
+      "title": "Aristo Video",
+      "format": "Cafe Video",
+      "category": "video",
+      "platform": "Instagram",
+      "client": "Aristo",
+      "date": "2026",
+      "location": "",
+      "description": "",
+      "longDescription": "",
+      "thumbnailUrl": "https://ik.imagekit.io/ramichaispc/Aristo/DSC04723.jpg?updatedAt=1783861293044",
+      "thumbnailAlt": "Client video thumbnail",
+      "embedUrl": "",
+      "watchUrl": "https://www.instagram.com/p/DWWGErIiERx/",
+      "deliverables": [],
       "featuredOnHome": true,
       "visible": true
     }
@@ -383,9 +399,221 @@
       ],
       "featuredOnHome": true,
       "visible": true
+    },
+    {
+      "id": "client-photo-1784199052104-44c70d",
+      "title": "Solana",
+      "client": "Solana",
+      "category": "photo",
+      "shootType": "Client photos",
+      "date": "2026",
+      "location": "",
+      "description": "",
+      "longDescription": "",
+      "coverUrl": "https://ik.imagekit.io/ramichaispc/Solana/DSC06892.jpg",
+      "coverAlt": "Client photo shoot cover",
+      "details": [],
+      "photos": [
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06905.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06879.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06870-2.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06863.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06844.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06877.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06870.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06873.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06872.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06867.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06867.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06869.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06850.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06896.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06892.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06898.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06890.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06888.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        },
+        {
+          "url": "https://ik.imagekit.io/ramichaispc/Solana/DSC06887.jpg",
+          "alt": "Solana photo",
+          "caption": ""
+        }
+      ],
+      "featuredOnHome": false,
+      "visible": true
     }
   ],
-  "personalWork": [],
+  "personalWork": [
+    {
+      "id": "personal-1784199821873-1693af",
+      "title": "Urbax1",
+      "type": "",
+      "category": "photo personal",
+      "description": "",
+      "detailA": "Photo",
+      "detailB": "URBAX",
+      "mediaUrl": "https://ik.imagekit.io/ramichaispc/PersonalWork/DSC06802.jpg",
+      "mediaAlt": "",
+      "shape": "wide",
+      "featuredOnHome": true,
+      "visible": true
+    },
+    {
+      "id": "personal-1784199940537-fc44ea",
+      "title": "Urbax2",
+      "type": "",
+      "category": "photo personal",
+      "description": "",
+      "detailA": "Photo",
+      "detailB": "URBAX",
+      "mediaUrl": "https://ik.imagekit.io/ramichaispc/PersonalWork/DSC06797.jpg",
+      "mediaAlt": "",
+      "shape": "wide",
+      "featuredOnHome": false,
+      "visible": true
+    },
+    {
+      "id": "personal-1784199987565-1c8bc9",
+      "title": "Urbax3",
+      "type": "",
+      "category": "photo personal",
+      "description": "",
+      "detailA": "Photo",
+      "detailB": "URBAX",
+      "mediaUrl": "https://ik.imagekit.io/ramichaispc/PersonalWork/DSC06039.jpg",
+      "mediaAlt": "",
+      "shape": "tall",
+      "featuredOnHome": true,
+      "visible": true
+    },
+    {
+      "id": "personal-1784200020534-fbedef",
+      "title": "Beach Landscape",
+      "type": "",
+      "category": "photo personal",
+      "description": "",
+      "detailA": "Photo",
+      "detailB": "LANDSCAPE",
+      "mediaUrl": "https://ik.imagekit.io/ramichaispc/PersonalWork/b49c5b61-fc94-45cd-bb20-9aa95e28faea.jpg",
+      "mediaAlt": "",
+      "shape": "wide",
+      "featuredOnHome": true,
+      "visible": true
+    },
+    {
+      "id": "personal-1784200067957-79cfe8",
+      "title": "Desert Landscape",
+      "type": "",
+      "category": "photo personal",
+      "description": "",
+      "detailA": "Photo",
+      "detailB": "LANDSCAPE",
+      "mediaUrl": "https://ik.imagekit.io/ramichaispc/PersonalWork/DSC06601%20(1).jpg",
+      "mediaAlt": "",
+      "shape": "wide",
+      "featuredOnHome": true,
+      "visible": true
+    },
+    {
+      "id": "personal-1784200077104-a27fc5",
+      "title": "Sea Rocks",
+      "type": "",
+      "category": "photo personal",
+      "description": "",
+      "detailA": "Photo",
+      "detailB": "SEA",
+      "mediaUrl": "https://ik.imagekit.io/ramichaispc/PersonalWork/DSC06601%20(1).jpg",
+      "mediaAlt": "",
+      "shape": "tall",
+      "featuredOnHome": true,
+      "visible": true
+    },
+    {
+      "id": "personal-1784200160080-4f7976",
+      "title": "Standing In Field",
+      "type": "",
+      "category": "photo personal",
+      "description": "",
+      "detailA": "Photo",
+      "detailB": "FIELD",
+      "mediaUrl": "https://ik.imagekit.io/ramichaispc/PersonalWork/DSC04513.jpg",
+      "mediaAlt": "",
+      "shape": "tall",
+      "featuredOnHome": true,
+      "visible": true
+    }
+  ],
   "shortFilms": [],
   "services": [
     {
