@@ -8,13 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Courier+Prime:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/app.css?v=motion-2">
+  <link rel="stylesheet" href="css/app.css?v=motion-3">
 </head>
 <body data-page="films">
   <div class="topbar">
     <div class="topbar-inner">
       <a class="logo" href="index.html" id="site-name">Ramichai</a>
-      <nav class="topnav" aria-label="Main navigation">
+      <button class="nav-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false"><span></span><span></span><span></span><span class="sr-only">Menu</span></button>
+      <nav class="topnav" id="primary-navigation" aria-label="Main navigation">
         <a href="work.html">Client Work</a>
         <a href="personal.html">Personal</a>
         <a href="films.html">Short Films</a>
@@ -37,6 +38,6 @@
     <footer id="footer"></footer>
   </main>
 
-  <script src="js/site.js?v=motion-2"></script>
+  <script src="js/site.js?v=motion-3"></script>
 </body>
 </html>

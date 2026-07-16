@@ -602,6 +602,35 @@ function wireScrollState() {
   window.addEventListener("scroll", sync, { passive: true });
 }
 
+function wireMobileNav() {
+  const topbar = document.querySelector(".topbar");
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.querySelector(".topnav");
+  if (!topbar || !toggle || !nav) return;
+
+  const setOpen = (open) => {
+    topbar.classList.toggle("is-open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    document.body.classList.toggle("nav-open", open);
+  };
+
+  toggle.addEventListener("click", () => {
+    setOpen(!topbar.classList.contains("is-open"));
+  });
+
+  nav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) setOpen(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setOpen(false);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 820) setOpen(false);
+  }, { passive: true });
+}
+
 function wireHeroParallax() {
   const heroBoard = document.querySelector(".hero-board");
   if (!heroBoard || typeof window.addEventListener !== "function") return;
@@ -659,6 +688,7 @@ function wireReveals() {
 }
 
 function wireMotion() {
+  wireMobileNav();
   wireScrollState();
   wireHeroParallax();
   wireReveals();
