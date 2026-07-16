@@ -144,7 +144,11 @@ function renderHero(data) {
 }
 
 function renderFeatured(data) {
-  const featured = data.featuredVideo;
+  const featured = data.featuredVideo || {};
+  if (featured.visible === false) {
+    setHtml("#featured-video", "");
+    return;
+  }
   const notes = (featured.notes || []).map((note) => `
     <article class="brief-card ${escapeHtml(note.color || "teal")}">
       <b>${escapeHtml(note.title)}</b>
